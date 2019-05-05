@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sally Warshaw's Resume</title>
+  <style type="text/css">
+      body {
+        font-family: 'Roboto Mono', monospace;
+        display: border-box;
+        background-color: #FFFFF0;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    li, p {
+        line-height: 1.5;
+    }
+
+    img {
+        max-height: 150px;
+        padding-right: 100px;
+        padding-left: 50px;
+    }
+    .photo-contact-container {
+        display: flex;
+        justify-content: row;
+    }
+    
+    .wrapper {
+        padding: 50px;
+    }
+
+    .title {
+        padding-left: 35px;
+
+    }
+  </style>
+
+</head>
+<body>
+    <div id="application-root"></div>
+<script src="https://unpkg.com/react@16/umd/react.development.js"> </script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+<script type="text/babel">
+    function App(props) {
+        console.log(props)
+        return (
+        <div className="wrapper">
+            <header>
+                <h1>Sally Warshaw</h1>
+            </header>
+            <main>
+                <div className="photo-contact-container">
+                    <img src="sally-image.jpg" alt="Ilana from broad city - image"/>
+                    <address>
+                    <h2 className="title">Contact Information</h2>
+                        <ul>
+                            <li><strong>Phone</strong>: (519) 210-5583</li>
+                            <li><strong>Email</strong>: sally.warshaw@gmail.com</li>
+                            <li><strong>Address</strong>: 22 Warby Place, Seattle, WA 98101</li>
+                        </ul>
+                    </address>
+                </div>
+                <h2 className="title">Experience</h2>
+                <ul>
+                    <li>
+                        <h3>OfficeMax (November 2017 — Present</h3>
+                        <h3>Printing Services Manager</h3>
+                        <ul>
+                            <li>> Semiotics wayfarers subway tile keytar letterpress DIY godard jianbing gochujang tousled tumeric.</li>
+                            <li>> Viral wolf mlkshk, adaptogen bespoke man braid occupy tilde pickled messenger bag.</li>
+                            <li>> Tousled distillery brunch DIY glossier. VHS 90's church-key PBR&B.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>The Office (August 2015 — September 2017</h3>
+                        <h3>Executive Assistant</h3>
+                        <ul>
+                            <li>> Typewriter cold-pressed lyft keytar williamsburg quinoa narwhal seitan.</li>
+                            <li>> Tumeric gastropub taiyaki, bicycle rights vegan direct trade succulents aesthetic waistcoat woke man braid.</li>
+                            <li>> Vexillologist keytar portland fixie, meditation chillwave tofu gentrify mustache 3 wolf moon hoodie quinoa lyft.</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h2 className="title">Education</h2>
+                <ul>
+                    <li><strong>Degree</strong>: BA, Economics, University of California, Los Angeles (UCLA)</li>
+                    <li><strong>GPA</strong>: 3.8</li>
+                    <li><strong>Honors</strong>: Magna Cum Laude, Honors Society, Graedle Endowed Fellowship</li>
+                </ul>
+            </main>
+        </div>
+        );
+    };
+    ReactDOM.render(
+    <App/>,
+    document.querySelector('#application-root')
+    );
+    </script>
+</body>
+</html>
